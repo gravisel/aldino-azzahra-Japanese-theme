@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldino-Azzahra-Wedding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <!-- ADMIN LOGIN -->
+        <div class="dashboardLogin">
+            <div class="login-card">
+                <h2>Admin Login</h2>
+                <p class="subtitle">Akses panel link undangan</p>
+
+                <input id="admin-pass" type="password" placeholder="Masukkan password">
+
+                <button id="login-btn">Login</button>
+
+                <p id="login-error">Password salah!</p>
+            </div>
+            <div id="admin-panel" class="admin-panel">
+                <h2 class="panel-title">Admin Panel</h2>
+                <p class="panel-subtitle">Generator Link Tamu — Undangan Digital</p>
+
+                <label class="input-label">Nama Tamu</label>
+                <input id="nama-client" type="text" class="input-field" placeholder="Masukkan nama tamu">
+
+                <button id="generate" class="btn-generate">
+                    Generate Link
+                </button>
+
+                <label class="input-label" style="margin-top:20px;">Link Undangan</label>
+                <input id="link-output" class="input-field" readonly> <br>
+                <button class="copy-btn3" style="margin-top: 5px;">Copy Link</button>
+                <div id="toast3" class="toast3">Link berhasil dicopy✅</div>
+            </div>
+        </div>
+
+
+        <div id="cover" class="cover">
+            <img src="img/sakuraKiri1.png" class="ranting-kiri">
+            <img src="img/sakuraKiri2.png" class="ranting-kiri2">
+            <img src="img/sakuraKanan1.png" class="ranting-kanan">
+            <img src="img/SakuraKanan2.png" class="ranting-kanan2">
+            <div class="cover1">
+                <p class="wedding-title">The Wedding Of</p>
+                <div class="namaPasangan">
+                    <h1 style="color: #B81B3D; text-shadow: 0px 5px 10px rgb(255, 255, 255);">Aldino & Azzahra</h1>
+                </div>
+            </div>
+            <div class="cover2">
+                <p>Kepada Yth.</p>
+                <h3 id="guest-name" style="font-size: 25px; margin: 5px;">Nama Tamu</h3>
+                <p>Di Tempat</p>
+            </div>
+            <button id="open-btn" style="width: 30%;">Buka Undangan </button>
+            <audio id="musik" src="musik/beatiful in white.MP3" autoplay loop></audio>
+
+        </div>
+
+        <div class="undangan">
+
+            <div class="contentA">
+                <div style="display: flex; max-height: 180px; max-width: 480px; position: relative;">
+                    <div style="transform: translateX(-180px);"><img class="sakuraPos1" src="img/sakura1.png" alt="" style="height: 100%; position: absolute; transform: rotate(0deg);"></div>
+                    <div style="transform: translateX(-90px);"><img  class="sakuraPos2" src="img/sakura2.png" alt="" style="height: 100%; position: absolute; transform: rotate(0deg);"></div>
+                    <div style="transform: translateX(-10px);"><img class="sakuraPos3" src="img/sakura3.png" alt="" style="height: 100%; position: absolute; transform: rotate(0deg);"></div>
+                    <div style="transform: translateX( 50px);"><img class="sakuraPos4" src="img/sakura3.png" alt="" style="height: 100%; position: absolute"></div>
+                    <div style="transform: translateX(150px);"><img class="sakuraPos5" src="img/sakura2.png" alt="" style="height: 100%; position: absolute;"></div>
+                    <div style="transform: translateX(180px);"><img class="sakuraPos6" src="img/sakura1.png" alt="" style="height: 100%; position: relative; "></div>
+                </div>
+                <p class="fade wedding-title">The Celebration of Love</p>
+                <div class="namaPasangan">
+                    <h1 class="fade3" style="color: #b81b3d;">Aldino & Azzahra</h1>
+                </div>
+
+                <p class="wedding-date fade3">Minggu, 8 Februari 2026</p>
+                <div class="contentAFoto"
+                    style="position: relative; z-index: 10; max-width: 380px; max-height: 300px; margin: 30px 0px; aspect-ratio: 16 / 10;">
+                    <div><img src="img/contentAimg.png" alt="" style="width: 300px; margin: 0 auto;"></div>
+                    <div class="sakura-pos1" style="position: absolute; left: 5%; top: -15%;">
+                        <img src="img/contentAsakura1.png" alt="" class="contentAsakura1">
+                    </div>
+                    <div class="sakura-pos2" style="position: absolute; left: 35%; top: 40%;">
+                        <img src="img/contenAsakura2.png" alt="" class="contentAsakura2">
+                    </div>
+                </div>
+                <div class="fade" style="width: 100%; height: 500px; background: url(img/buttonGnFuji.png); background-size: cover; background-position: center 80%; position: absolute; z-index: 2; bottom: -50px;">
+                </div>
+            </div>
+
+
+            <div class="contentB">
+                <div class="cardB">
+                    <img src="img/sakura.png" alt="" class="fade3">
+                    <p class="fade">Assalamu’alaikum warahmatullahi wabarakatuh<br><br>
+                        Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri
+                        acara pernikahan kami.</p> <br>
+                    <h1 style="color: #B81B3D;" class="fade2">Aldino</h1> <br><h1 style="color: #B81B3D;"> &</h1> <br> <h1 style="color: #B81B3D;" class="fade4">Azzahra</h1>
+                    <div class="countdown">
+                        <h2>Almost Our Day</h2> <br>
+                        <div class="timer">
+                            <div class="time-box fade4">
+                                <h3 id="days">0</h3>
+                                <p>Hari</p>
+                            </div>
+                            <div class="time-box fade4">
+                                <h3 id="hours">0</h3>
+                                <p>Jam</p>
+                            </div>
+                            <div class="time-box fade2">
+                                <h3 id="minutes">0</h3>
+                                <p>Menit</p>
+                            </div>
+                            <div class="time-box fade2">
+                                <h3 id="seconds">0</h3>
+                                <p>Detik</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xml:space="preserve" width="100%"
+                            height="auto" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 53.13 10.34">
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer" />
+                                <g id="_2407017702080">
+                                    <path
+                                        d="M26.58 6.94c0.35,0.44 0.65,0.77 0.79,1.46 0.14,0.74 -0.14,1.46 -0.62,1.71 -0.94,0.49 -0.91,-2.01 -0.17,-3.17zm2.1 -0.24c-0.23,-0.85 1.61,-1.34 2.49,-1.26 -0.18,0.25 -0.66,0.68 -1.01,0.89 -0.41,0.25 -0.93,0.54 -1.48,0.37zm-2.34 -0.57c-0.36,-0.13 -1.01,-1.11 -1.25,-1.51 -0.15,-0.25 -0.27,-0.39 -0.11,-0.64 0.34,-0.49 1.37,-1.46 2.23,-1.53 0.5,0.48 0.16,1.35 -0.06,1.95 -0.16,0.42 -0.6,1.44 -0.81,1.73zm-1.58 -2.39c-0.45,-0.35 -0.21,-1.86 0.03,-2.34 0.61,-1.22 2.81,-1.85 3.61,-0.3 0.53,1.04 0.04,2.07 0.13,2.47 0.35,0.07 0.32,-0.16 0.49,-0.4 0.23,-0.33 1.24,-0.87 1.65,-1.02 2.01,-0.72 2.16,1.12 1.09,2.61 -0.44,0.62 -0.33,0.45 -1.18,0.55 -0.53,0.07 -1.01,0.17 -1.42,0.4 -0.32,0.18 -0.81,0.47 -0.74,0.99 0.66,0.52 1.82,-0.14 2.28,-0.49 0.15,-0.12 0.28,-0.23 0.42,-0.34 0.46,-0.34 0.31,-0.61 1.64,-0.19 2.79,0.88 15.05,3.38 18.45,1.56 0.99,-0.53 1.98,-1.54 1.92,-2.72 -0.02,-0.47 -0.26,-0.85 -0.77,-0.67 -0.07,0.12 -0.03,-0.06 0,0.08 0.03,0.12 0.09,0.08 0.1,0.32 0.01,0.13 -0.03,0.34 -0.07,0.47 -1.42,5.53 -16.33,1.23 -20.58,0.57 0.01,-0.21 0.07,-0.21 0.21,-0.37 1.63,-1.97 0.54,-3.72 -1.5,-2.92 -0.69,0.26 -1.1,0.72 -1.46,0.86 0.17,-1.27 -0.03,-2.05 -0.87,-2.54 -1.51,-0.9 -5.29,0.05 -3.81,3.6 0.13,0.32 0.07,0.29 -0.23,0.86l-0.18 0.25c-0.61,-1.59 -3.03,-1.64 -2.92,0.2 0.04,0.66 0.69,1.47 0.97,1.75 0.48,0.47 1.02,0.74 1.63,1.03 -0.12,0.15 -0.64,0.28 -1.41,0.18 -1.3,-0.19 -3.3,-0.79 -5.16,-1.18 -3.82,-0.81 -8.21,-1.29 -12.09,-1.6 -1.6,-0.13 -3.12,-0.08 -4.06,0.44 -2.17,1.21 0.05,2.94 0.65,2.17 -0.39,-0.14 -0.5,0.13 -0.69,-0.45 -0.26,-0.83 0.4,-1.62 1.54,-1.74 1.68,-0.19 9.47,0.45 14.3,1.41 1.75,0.35 4,0.98 5.58,1.14 0.9,0.08 1.05,-0.05 1.73,-0.38l0.08 -0.05c-0.71,-0.17 -1.57,-0.99 -1.92,-1.41 -1.7,-2 0.4,-3.82 1.47,-1.15 0.06,0.15 0.15,1 0.49,0.71 0.17,-0.16 0,-0.93 0.49,-1.52l0.71 0.97c0.3,0.37 0.53,0.52 0.81,0.81 0.02,0.36 -0.25,0.75 -0.37,1.11 -1.27,3.7 2.23,3.57 1.88,1.04 -0.05,-0.38 -0.2,-0.74 -0.37,-1.04 -0.79,-1.37 -0.88,-0.11 0.24,-2.67 0.21,-0.49 0.63,-1.49 0.43,-2.09 -0.27,-0.77 -1.29,-0.42 -1.81,-0.15 -0.95,0.49 -1,0.8 -1.41,1.18z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <p class="fade" style="text-align: center; margin-top: 20px;">" Dan di antara tanda-tanda
+                        kekuasaan-Nya diciptakan-Nya untukmu pasangan hidup dari jenismusendiri
+                        supaya kamu dapat ketenangan hati dan dijadikannya kasih sayang di antara kamu. Sesungguhnyayang
+                        demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berpikir. " <br><br>
+                        ~ Q.S Ar-Rum : 21 ~</p>
+                </div>
+            </div>
+
+            <div class="contentC">
+                <div class="mempelai" style="margin: 30px 0px 30px;">
+                    <div
+                        style="width: 30%; align-items: flex-start; display: flex; flex-direction: column; justify-content: flex-start; gap: 20px; ">
+                        <h1 class="fade" style="text-align: left">Aldino Fajar</h1>
+                        <p class="fade3" style="text-align: left;">Putra dari<br><b> Bapak Ahmad Syafruddin & Ibu Nur
+                                Asiyah</b>
+                        </p>
+                        <a class="fade" style="display: flex; gap: 6px;"
+                            href="https://www.instagram.com/hariyanto_agus1/" target="_blank"
+                            rel="noopener noreferrer"><img src="img/instagram.png" alt="">
+                            <p style="text-align: left;">aldino.fajar</p>
+                        </a>
+                    </div>
+                    <div class="fotoMempelai fade4" style=" border-radius: 50% 0; overflow: hidden;"><img
+                            src="img/00-Groom.jpg" alt="">
+                    </div>
+                </div>
+                <h1 class="fade3" style="font-size: 4rem;">&</h1>
+                <div class="mempelai" style="margin: 30px 0px 30px;">
+                    <div class="fotoMempelai fade2" style="border-radius: 50% 0; overflow: hidden; position: relative;"><img
+                            src="img/00-Bride.jpg" alt="" style="position: relative;"> <img src="img/sakura1.png" alt="" style="position: absolute;" >
+                    </div>
+                    <div
+                        style="width: 30%; align-items: flex-end; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+                        <h1 class="fade" style="text-align: right;">Nadila Azzahra</h1>
+                        <p class="fade3" style="text-align: right;">Putri dari <br> <b>Bapak Budi Santoso & Ibu Siti
+                                Marfu’ah</b>
+                        </p>
+                        <a class="fade"
+                            href="https://www.instagram.com/laila_hlmts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" rel="noopener noreferrer"><img src="img/instagram.png" alt="">
+                            <p>nadila.azzahra</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentD">
+                <h1 style="text-shadow: 0px 5px 10px rgb(255, 255, 255);">Wedding Event</h1>
+                <div class="akadNikah">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xml:space="preserve" width="37px"
+                            height="26px" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 8.44 5.96">
+                            <defs>
+                                <style type="text/css">
+                                </style>
+                            </defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer" />
+                                <g id="_2701616285456">
+                                    <path class="fil0"
+                                        d="M5.13 1.86c0.02,0.04 0.06,0.07 0.1,0.12 0.02,0.03 0.05,0.07 0.07,0.12 0.33,0.71 -0.47,1.41 -0.87,1.73 -0.84,0.69 -2.28,1.31 -3.45,1.12 -0.47,-0.07 -0.92,-0.34 -0.89,-0.85 0.01,-0.31 0.05,-0.29 0.1,-0.48 -0.04,0.03 -0.04,0.06 -0.06,0.09 -0.23,0.57 -0.16,1.15 0.23,1.61 0.38,0.46 0.95,0.64 1.56,0.64 0.97,0 1.8,-0.28 2.54,-0.8 0.11,-0.07 0.21,-0.14 0.31,-0.23 0.28,-0.23 0.57,-0.52 0.76,-0.84 0.31,-0.51 0.39,-1.13 0.13,-1.68 -0.09,-0.19 -0.34,-0.5 -0.53,-0.55z" />
+                                    <path class="fil0"
+                                        d="M4.33 0.75c0.17,-0.05 0.21,-0.07 0.42,-0.04 0.74,0.09 1.29,0.46 1.81,0.93 0.07,0.06 0.16,0.16 0.22,0.23 0.16,0.2 0.25,0.31 0.39,0.53 0.22,0.35 0.48,0.84 0.58,1.25 0.1,0.37 0.06,0.49 -0.02,0.79 0.39,-0.01 0.59,-0.26 0.66,-0.58 0.08,-0.35 -0.04,-0.74 -0.16,-1.03 -0.11,-0.3 -0.26,-0.56 -0.42,-0.81 -0.43,-0.67 -1.19,-1.43 -1.89,-1.78 -0.29,-0.14 -0.65,-0.24 -1,-0.12 -0.17,0.05 -0.31,0.13 -0.39,0.23 -0.07,0.07 -0.19,0.25 -0.2,0.4z" />
+                                    <path class="fil0"
+                                        d="M0.59 4.71c0.05,-0.32 0.32,-0.68 0.48,-0.84 0.68,-0.64 1.64,-1.18 2.61,-1.32 -0.01,-0.12 -0.15,-0.36 -0.21,-0.82 -0.26,0.01 -1.01,0.28 -1.27,0.39 -0.37,0.16 -0.77,0.37 -1.08,0.57 -0.36,0.24 -0.6,0.48 -0.79,0.89 -0.08,0.18 -0.17,0.46 -0.13,0.69 0.04,0.19 0.23,0.39 0.39,0.44z" />
+                                    <path class="fil0"
+                                        d="M5.11 2.94c-0.03,-0.06 -0.07,-0.11 -0.11,-0.17 -0.44,-0.67 -1.05,-1.45 -0.72,-2.24 0.06,-0.15 0.14,-0.25 0.24,-0.34 0.04,-0.04 0.28,-0.21 0.36,-0.18 -0.18,-0.04 -0.45,0.08 -0.56,0.15 -0.47,0.3 -0.73,0.83 -0.71,1.45 0.01,0.6 0.26,1.14 0.56,1.61 0.06,0.08 0.24,0.37 0.3,0.42 0.07,-0.04 0.13,-0.1 0.18,-0.16 0.06,-0.05 0.12,-0.1 0.17,-0.16 0.07,-0.07 0.25,-0.27 0.29,-0.38z" />
+                                    <path class="fil0"
+                                        d="M5.38 4.51c0.1,0.12 0.59,0.39 0.76,0.47 0.67,0.3 1.3,0.36 1.87,-0.12 0.2,-0.17 0.43,-0.52 0.43,-0.79 -0.11,0.23 -0.25,0.42 -0.52,0.48 -0.45,0.09 -1.16,-0.21 -1.52,-0.44 -0.29,-0.19 -0.31,-0.24 -0.55,-0.45 -0.14,0.31 -0.11,0.33 -0.34,0.66 -0.04,0.06 -0.1,0.13 -0.13,0.19z" />
+                                    <path class="fil0"
+                                        d="M5.22 2.68c0.05,-0.11 0.05,-0.3 0.02,-0.42 -0.02,-0.15 -0.07,-0.22 -0.15,-0.31 -0.15,-0.18 -0.3,-0.28 -0.64,-0.3 0.02,0.08 0.11,0.22 0.15,0.29l0.35 0.56c0.04,0.07 0.02,0.08 0.11,0.1 0.07,0.02 0.11,0.06 0.16,0.08z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h1 class="fade3" style="font-size: 20px; color: #0044d6;">AKAD NIKAH</h1><br>
+                    <h2 class="fade4" style="color: #376ad8;">Minggu, 8 Februari 2026</h2>
+                    <p class="fade2">Pukul 08.00 WIB</p> <br>
+                    <h2 class="fade4" style="color: #376ad8;">ASSEMBLY HALL <BR>MENARA MANDIRI</BR></h2> <br>
+                    <P class="fade2">Jenderal Sudirman No.Kav 54-55<br>Senayan, Kota Jakarta Selatan</P>
+                    <div class="map-card fade" data-alamat="Assembly Hall Menara Mandiri by IKK Indonesia">
+                        <div class="map-text fade" style="color: #376ad8;">
+                            <p>View Maps</p>
+                        </div>
+                    </div>
+                    <div style="margin: 20px 0;" class="fade3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xml:space="preserve" width="100%"
+                            height="auto" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 53.13 10.34">
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer" />
+                                <g id="_2407017702080">
+                                    <path
+                                        d="M26.58 6.94c0.35,0.44 0.65,0.77 0.79,1.46 0.14,0.74 -0.14,1.46 -0.62,1.71 -0.94,0.49 -0.91,-2.01 -0.17,-3.17zm2.1 -0.24c-0.23,-0.85 1.61,-1.34 2.49,-1.26 -0.18,0.25 -0.66,0.68 -1.01,0.89 -0.41,0.25 -0.93,0.54 -1.48,0.37zm-2.34 -0.57c-0.36,-0.13 -1.01,-1.11 -1.25,-1.51 -0.15,-0.25 -0.27,-0.39 -0.11,-0.64 0.34,-0.49 1.37,-1.46 2.23,-1.53 0.5,0.48 0.16,1.35 -0.06,1.95 -0.16,0.42 -0.6,1.44 -0.81,1.73zm-1.58 -2.39c-0.45,-0.35 -0.21,-1.86 0.03,-2.34 0.61,-1.22 2.81,-1.85 3.61,-0.3 0.53,1.04 0.04,2.07 0.13,2.47 0.35,0.07 0.32,-0.16 0.49,-0.4 0.23,-0.33 1.24,-0.87 1.65,-1.02 2.01,-0.72 2.16,1.12 1.09,2.61 -0.44,0.62 -0.33,0.45 -1.18,0.55 -0.53,0.07 -1.01,0.17 -1.42,0.4 -0.32,0.18 -0.81,0.47 -0.74,0.99 0.66,0.52 1.82,-0.14 2.28,-0.49 0.15,-0.12 0.28,-0.23 0.42,-0.34 0.46,-0.34 0.31,-0.61 1.64,-0.19 2.79,0.88 15.05,3.38 18.45,1.56 0.99,-0.53 1.98,-1.54 1.92,-2.72 -0.02,-0.47 -0.26,-0.85 -0.77,-0.67 -0.07,0.12 -0.03,-0.06 0,0.08 0.03,0.12 0.09,0.08 0.1,0.32 0.01,0.13 -0.03,0.34 -0.07,0.47 -1.42,5.53 -16.33,1.23 -20.58,0.57 0.01,-0.21 0.07,-0.21 0.21,-0.37 1.63,-1.97 0.54,-3.72 -1.5,-2.92 -0.69,0.26 -1.1,0.72 -1.46,0.86 0.17,-1.27 -0.03,-2.05 -0.87,-2.54 -1.51,-0.9 -5.29,0.05 -3.81,3.6 0.13,0.32 0.07,0.29 -0.23,0.86l-0.18 0.25c-0.61,-1.59 -3.03,-1.64 -2.92,0.2 0.04,0.66 0.69,1.47 0.97,1.75 0.48,0.47 1.02,0.74 1.63,1.03 -0.12,0.15 -0.64,0.28 -1.41,0.18 -1.3,-0.19 -3.3,-0.79 -5.16,-1.18 -3.82,-0.81 -8.21,-1.29 -12.09,-1.6 -1.6,-0.13 -3.12,-0.08 -4.06,0.44 -2.17,1.21 0.05,2.94 0.65,2.17 -0.39,-0.14 -0.5,0.13 -0.69,-0.45 -0.26,-0.83 0.4,-1.62 1.54,-1.74 1.68,-0.19 9.47,0.45 14.3,1.41 1.75,0.35 4,0.98 5.58,1.14 0.9,0.08 1.05,-0.05 1.73,-0.38l0.08 -0.05c-0.71,-0.17 -1.57,-0.99 -1.92,-1.41 -1.7,-2 0.4,-3.82 1.47,-1.15 0.06,0.15 0.15,1 0.49,0.71 0.17,-0.16 0,-0.93 0.49,-1.52l0.71 0.97c0.3,0.37 0.53,0.52 0.81,0.81 0.02,0.36 -0.25,0.75 -0.37,1.11 -1.27,3.7 2.23,3.57 1.88,1.04 -0.05,-0.38 -0.2,-0.74 -0.37,-1.04 -0.79,-1.37 -0.88,-0.11 0.24,-2.67 0.21,-0.49 0.63,-1.49 0.43,-2.09 -0.27,-0.77 -1.29,-0.42 -1.81,-0.15 -0.95,0.49 -1,0.8 -1.41,1.18z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xml:space="preserve" width="37px"
+                            height="26px" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 8.44 5.96">
+                            <defs>
+                                <style type="text/css">
+                                </style>
+                            </defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer" />
+                                <g id="_2701616285456">
+                                    <path class="fil0"
+                                        d="M5.13 1.86c0.02,0.04 0.06,0.07 0.1,0.12 0.02,0.03 0.05,0.07 0.07,0.12 0.33,0.71 -0.47,1.41 -0.87,1.73 -0.84,0.69 -2.28,1.31 -3.45,1.12 -0.47,-0.07 -0.92,-0.34 -0.89,-0.85 0.01,-0.31 0.05,-0.29 0.1,-0.48 -0.04,0.03 -0.04,0.06 -0.06,0.09 -0.23,0.57 -0.16,1.15 0.23,1.61 0.38,0.46 0.95,0.64 1.56,0.64 0.97,0 1.8,-0.28 2.54,-0.8 0.11,-0.07 0.21,-0.14 0.31,-0.23 0.28,-0.23 0.57,-0.52 0.76,-0.84 0.31,-0.51 0.39,-1.13 0.13,-1.68 -0.09,-0.19 -0.34,-0.5 -0.53,-0.55z" />
+                                    <path class="fil0"
+                                        d="M4.33 0.75c0.17,-0.05 0.21,-0.07 0.42,-0.04 0.74,0.09 1.29,0.46 1.81,0.93 0.07,0.06 0.16,0.16 0.22,0.23 0.16,0.2 0.25,0.31 0.39,0.53 0.22,0.35 0.48,0.84 0.58,1.25 0.1,0.37 0.06,0.49 -0.02,0.79 0.39,-0.01 0.59,-0.26 0.66,-0.58 0.08,-0.35 -0.04,-0.74 -0.16,-1.03 -0.11,-0.3 -0.26,-0.56 -0.42,-0.81 -0.43,-0.67 -1.19,-1.43 -1.89,-1.78 -0.29,-0.14 -0.65,-0.24 -1,-0.12 -0.17,0.05 -0.31,0.13 -0.39,0.23 -0.07,0.07 -0.19,0.25 -0.2,0.4z" />
+                                    <path class="fil0"
+                                        d="M0.59 4.71c0.05,-0.32 0.32,-0.68 0.48,-0.84 0.68,-0.64 1.64,-1.18 2.61,-1.32 -0.01,-0.12 -0.15,-0.36 -0.21,-0.82 -0.26,0.01 -1.01,0.28 -1.27,0.39 -0.37,0.16 -0.77,0.37 -1.08,0.57 -0.36,0.24 -0.6,0.48 -0.79,0.89 -0.08,0.18 -0.17,0.46 -0.13,0.69 0.04,0.19 0.23,0.39 0.39,0.44z" />
+                                    <path class="fil0"
+                                        d="M5.11 2.94c-0.03,-0.06 -0.07,-0.11 -0.11,-0.17 -0.44,-0.67 -1.05,-1.45 -0.72,-2.24 0.06,-0.15 0.14,-0.25 0.24,-0.34 0.04,-0.04 0.28,-0.21 0.36,-0.18 -0.18,-0.04 -0.45,0.08 -0.56,0.15 -0.47,0.3 -0.73,0.83 -0.71,1.45 0.01,0.6 0.26,1.14 0.56,1.61 0.06,0.08 0.24,0.37 0.3,0.42 0.07,-0.04 0.13,-0.1 0.18,-0.16 0.06,-0.05 0.12,-0.1 0.17,-0.16 0.07,-0.07 0.25,-0.27 0.29,-0.38z" />
+                                    <path class="fil0"
+                                        d="M5.38 4.51c0.1,0.12 0.59,0.39 0.76,0.47 0.67,0.3 1.3,0.36 1.87,-0.12 0.2,-0.17 0.43,-0.52 0.43,-0.79 -0.11,0.23 -0.25,0.42 -0.52,0.48 -0.45,0.09 -1.16,-0.21 -1.52,-0.44 -0.29,-0.19 -0.31,-0.24 -0.55,-0.45 -0.14,0.31 -0.11,0.33 -0.34,0.66 -0.04,0.06 -0.1,0.13 -0.13,0.19z" />
+                                    <path class="fil0"
+                                        d="M5.22 2.68c0.05,-0.11 0.05,-0.3 0.02,-0.42 -0.02,-0.15 -0.07,-0.22 -0.15,-0.31 -0.15,-0.18 -0.3,-0.28 -0.64,-0.3 0.02,0.08 0.11,0.22 0.15,0.29l0.35 0.56c0.04,0.07 0.02,0.08 0.11,0.1 0.07,0.02 0.11,0.06 0.16,0.08z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <h1 class="fade3" style="font-size: 20px; color: #0044d6;">RESEPSI</h1><br>
+                    <h2 class="fade4" style="color: #376ad8;">Minggu, 8 Februari 2026</h2>
+                    <p class="fade2">Pukul 13.00 WIB</p> <br>
+                    <h2 class="fade4" style="color: #376ad8;">ASSEMBLY HALL <BR>MENARA MANDIRI</BR></h2> <br>
+                    <P class="fade2">Jenderal Sudirman No.Kav 54-55<br>Senayan, Kota Jakarta Selatan</P>
+                    <div class="map-card fade" data-alamat="Assembly Hall Menara Mandiri by IKK Indonesia">
+
+                        <div class="map-text fade" style="color: #376ad8;">
+                            <p>View Maps</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contentE">
+                <h1 class="fade">Our Gallery</h1>
+                <div class="view ">
+                    <div class="img-box fade3"><img src="img/1.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/2.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/3.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/4.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/5.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/6.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/7.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/8.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/2.jpeg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/3.jpeg" alt="" class="lazy-img"></div>
+                </div>
+                <div id="lightbox-overlay">
+                    <span id="close-btn">×</span>
+                    <span id="prev-btn" class="lightbox-btn">‹</span>
+                    <img id="lightbox-img" src="" alt="">
+                    <span id="next-btn" class="lightbox-btn">›</span>
+                </div>
+            </div>
+
+            <section class="contentG">
+                <h1 class="fade" style="text-shadow: 0px 5px 10px rgb(255, 255, 255);">RSVP<br>(Konfirmasi Kehadiran)</h1><br>
+                <input class="fade3" id="rsvp-name" placeholder="Nama Anda"
+                    style=" width: 100%;padding: 0 10px;background-color: #ffffff00; border: 0; border-bottom: 2px solid #0044d6; font-family: notoSerif;" />
+                <br><br>
+                <input class="fade3" id="rsvp-address" placeholder="Alamat atau asal"
+                    style=" width: 100%;padding: 0 10px;background-color: #ffffff00; border: 0; border-bottom: 2px solid #0044d6;font-family: notoSerif;" /><br><br>
+                <label class="fade3">Status Kehadiran</label>
+                <div class="fade2">
+                    <label><input type="radio" name="rsvp-status" value="Datang"> Datang</label><br>
+                    <label><input type="radio" name="rsvp-status" value="Ragu"> Ragu</label><br>
+                    <label><input type="radio" name="rsvp-status" value="Maaf tidak datang"> Maaf tidak datang</label>
+                </div> <br>
+                <button id="rsvp-send" style="border-radius: 0; background-color: #0044d6;">Kirim Konfirmasi</button>
+                <div id="rsvp-loading">
+                    <div class="spinner"></div>
+                    <span>Memproses...</span>
+                </div>
+                <button id="rsvp-wa" style="background:#25D366;color:white; border-radius: 0;">Reservasi via
+                    WhatsApp</button>
+                <div id="rsvp-status-text"></div>
+                <div style="margin: 30px 0;" class="fade3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xml:space="preserve" width="100%"
+                        height="auto" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 53.13 10.34">
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer" />
+                            <g id="_2407017702080">
+                                <path
+                                    d="M26.58 6.94c0.35,0.44 0.65,0.77 0.79,1.46 0.14,0.74 -0.14,1.46 -0.62,1.71 -0.94,0.49 -0.91,-2.01 -0.17,-3.17zm2.1 -0.24c-0.23,-0.85 1.61,-1.34 2.49,-1.26 -0.18,0.25 -0.66,0.68 -1.01,0.89 -0.41,0.25 -0.93,0.54 -1.48,0.37zm-2.34 -0.57c-0.36,-0.13 -1.01,-1.11 -1.25,-1.51 -0.15,-0.25 -0.27,-0.39 -0.11,-0.64 0.34,-0.49 1.37,-1.46 2.23,-1.53 0.5,0.48 0.16,1.35 -0.06,1.95 -0.16,0.42 -0.6,1.44 -0.81,1.73zm-1.58 -2.39c-0.45,-0.35 -0.21,-1.86 0.03,-2.34 0.61,-1.22 2.81,-1.85 3.61,-0.3 0.53,1.04 0.04,2.07 0.13,2.47 0.35,0.07 0.32,-0.16 0.49,-0.4 0.23,-0.33 1.24,-0.87 1.65,-1.02 2.01,-0.72 2.16,1.12 1.09,2.61 -0.44,0.62 -0.33,0.45 -1.18,0.55 -0.53,0.07 -1.01,0.17 -1.42,0.4 -0.32,0.18 -0.81,0.47 -0.74,0.99 0.66,0.52 1.82,-0.14 2.28,-0.49 0.15,-0.12 0.28,-0.23 0.42,-0.34 0.46,-0.34 0.31,-0.61 1.64,-0.19 2.79,0.88 15.05,3.38 18.45,1.56 0.99,-0.53 1.98,-1.54 1.92,-2.72 -0.02,-0.47 -0.26,-0.85 -0.77,-0.67 -0.07,0.12 -0.03,-0.06 0,0.08 0.03,0.12 0.09,0.08 0.1,0.32 0.01,0.13 -0.03,0.34 -0.07,0.47 -1.42,5.53 -16.33,1.23 -20.58,0.57 0.01,-0.21 0.07,-0.21 0.21,-0.37 1.63,-1.97 0.54,-3.72 -1.5,-2.92 -0.69,0.26 -1.1,0.72 -1.46,0.86 0.17,-1.27 -0.03,-2.05 -0.87,-2.54 -1.51,-0.9 -5.29,0.05 -3.81,3.6 0.13,0.32 0.07,0.29 -0.23,0.86l-0.18 0.25c-0.61,-1.59 -3.03,-1.64 -2.92,0.2 0.04,0.66 0.69,1.47 0.97,1.75 0.48,0.47 1.02,0.74 1.63,1.03 -0.12,0.15 -0.64,0.28 -1.41,0.18 -1.3,-0.19 -3.3,-0.79 -5.16,-1.18 -3.82,-0.81 -8.21,-1.29 -12.09,-1.6 -1.6,-0.13 -3.12,-0.08 -4.06,0.44 -2.17,1.21 0.05,2.94 0.65,2.17 -0.39,-0.14 -0.5,0.13 -0.69,-0.45 -0.26,-0.83 0.4,-1.62 1.54,-1.74 1.68,-0.19 9.47,0.45 14.3,1.41 1.75,0.35 4,0.98 5.58,1.14 0.9,0.08 1.05,-0.05 1.73,-0.38l0.08 -0.05c-0.71,-0.17 -1.57,-0.99 -1.92,-1.41 -1.7,-2 0.4,-3.82 1.47,-1.15 0.06,0.15 0.15,1 0.49,0.71 0.17,-0.16 0,-0.93 0.49,-1.52l0.71 0.97c0.3,0.37 0.53,0.52 0.81,0.81 0.02,0.36 -0.25,0.75 -0.37,1.11 -1.27,3.7 2.23,3.57 1.88,1.04 -0.05,-0.38 -0.2,-0.74 -0.37,-1.04 -0.79,-1.37 -0.88,-0.11 0.24,-2.67 0.21,-0.49 0.63,-1.49 0.43,-2.09 -0.27,-0.77 -1.29,-0.42 -1.81,-0.15 -0.95,0.49 -1,0.8 -1.41,1.18z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="gift">
+                    <h1 style="text-shadow: 0 1px 3px rgba(255, 255, 255, 0.822);" class="fade">Wedding Gift</h1>
+                    <div style="margin: 10px;" class="fade3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xml:space="preserve" width="80px"
+                            height="72px" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 12.4 11.23">
+                            <defs>
+                                <style type="text/css">
+                                </style>
+                            </defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer" />
+                                <g id="_2722766678432">
+                                    <path class="fil0"
+                                        d="M11.39 5.35c0.04,0.28 0.16,0.4 0.05,0.62 -0.26,0.07 -0.84,-0.33 -1.24,-0.51 -0.15,0.08 -0.38,0.42 -0.5,0.55 -0.08,0.09 -0.15,0.17 -0.23,0.27 -0.09,0.11 -0.13,0.22 -0.32,0.13 -0.13,-0.08 -0.07,-0.27 -0.11,-0.55 -0.01,-0.16 -0.03,-0.34 -0.1,-0.51l-1.59 0.01 0 5.85c0.86,0.02 1.74,0 2.6,0 2.04,0 1.95,0.17 1.95,-0.66 -0.01,-1.72 0.04,-3.48 -0.01,-5.19l-0.5 -0.01z" />
+                                    <path class="fil0"
+                                        d="M0.96 5.97c-0.11,-0.22 0,-0.35 0.05,-0.62l-0.51 0.01c-0.01,1.73 0,3.46 0,5.19 0,0.66 -0.02,0.67 0.65,0.66 1.27,0 2.65,0.03 3.9,0l0 -5.86 -1.59 0.02c-0.08,0.15 -0.1,0.35 -0.11,0.53 -0.02,0.23 0.03,0.41 -0.1,0.51 -0.19,0.09 -0.23,-0.02 -0.32,-0.13l-0.7 -0.82c-0.38,0.07 -0.92,0.6 -1.27,0.51z" />
+                                    <polygon class="fil0"
+                                        points="5.41,11.21 6.99,11.21 6.98,2.78 5.42,2.78 5.41,11.06 " />
+                                    <path class="fil0"
+                                        d="M7.36 1.1l-0.01 1.04c0.84,-0.23 0.99,-0.45 2.2,-0.57 0.57,-0.06 1.25,-0.02 1.78,0.2 0.19,0.09 0.31,0.2 0.47,0.27 0.23,-1.38 -0.15,-2.22 -1.66,-2.01 -1.11,0.15 -1.98,0.62 -2.78,1.07z" />
+                                    <path class="fil0"
+                                        d="M0.6 2.04c0.14,-0.06 0.25,-0.17 0.44,-0.26 0.57,-0.25 1.17,-0.28 1.81,-0.22 0.87,0.08 1.46,0.35 2.19,0.58l0.01 -1.04c-0.8,-0.45 -1.67,-0.91 -2.76,-1.06 -1.5,-0.22 -1.96,0.6 -1.69,2z" />
+                                    <path class="fil0"
+                                        d="M7.89 2.94c0.2,0.32 0.85,0.73 1.3,1.99 0.08,0.23 0.15,0.68 0.22,0.84 0.17,-0.1 0.53,-0.68 0.67,-0.72 0.14,-0.04 0.77,0.35 0.94,0.41 -0.14,-0.66 -0.64,-1.42 -0.97,-1.86 -0.15,-0.21 -0.23,-0.15 -0.52,-0.2 -0.19,-0.04 -0.38,-0.08 -0.56,-0.13 -0.34,-0.09 -0.77,-0.28 -1.08,-0.33z" />
+                                    <path class="fil0"
+                                        d="M7.65 2.43c0.67,0.36 2.31,0.81 3.19,0.65 0.33,-0.06 0.76,-0.26 0.82,-0.52 0.05,-0.24 -0.47,-0.47 -0.72,-0.54 -0.95,-0.28 -2.73,0.05 -3.29,0.41z" />
+                                    <path class="fil0"
+                                        d="M3 5.77c0.09,-0.63 0.3,-1.14 0.56,-1.61 0.4,-0.7 0.65,-0.82 0.94,-1.21l-1.1 0.33c-0.68,0.17 -0.87,0.07 -1.07,0.34 -0.33,0.47 -0.81,1.17 -0.96,1.84 0.19,-0.06 0.81,-0.47 0.97,-0.4 0.14,0.06 0.52,0.66 0.66,0.71z" />
+                                    <path class="fil0"
+                                        d="M4.72 2.44l-0.04 -0.04c-0.38,-0.23 -1.64,-0.46 -2.03,-0.49 -0.37,-0.04 -0.83,0.01 -1.17,0.1 -1.14,0.3 -0.8,0.91 0.01,1.05 0.88,0.16 2.64,-0.26 3.23,-0.62z" />
+                                    <path class="fil0"
+                                        d="M10.43 3.49c0.12,0.22 0.3,0.44 0.45,0.72 0.14,0.25 0.27,0.5 0.37,0.78 0.68,0.03 1.15,0.11 1.15,-0.35l0 -1.48c0,-0.32 -0.07,-0.41 -0.4,-0.41 -0.07,0.02 -0.15,0.33 -0.62,0.54 -0.32,0.15 -0.58,0.15 -0.95,0.2z" />
+                                    <path class="fil0"
+                                        d="M1.15 4.99c0.28,-0.79 0.58,-1.04 0.82,-1.5 -0.38,-0.05 -0.62,-0.05 -0.96,-0.2 -0.41,-0.17 -0.38,-0.28 -0.62,-0.54 -0.3,0 -0.39,0.08 -0.39,0.37l0 1.52c0,0.27 0.12,0.36 0.39,0.36 0.25,0 0.51,0 0.76,-0.01z" />
+                                    <polygon class="fil0" points="5.41,2.39 6.98,2.39 6.99,1.07 5.41,1.06 " />
+                                    <path class="fil0"
+                                        d="M5.05 2.97c-0.44,0.29 -1.27,1.31 -1.47,2.02l1.47 0 0 -2.02z" />
+                                    <path class="fil0"
+                                        d="M7.35 5l1.47 -0.01c-0.22,-0.73 -1.02,-1.72 -1.47,-2.02l0 2.03z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <p class="fade">Dengan segala hormat, bagi para tamu yang berkenan memberikan hadiah kepada kedua
+                        mempelai, dapat mengirimkannya melalui :</p>
+                    <button class="giftCollaps">Klik Disini</button>
+                    <div class="containerBank">
+                        <div class="bank">
+                            <h1>BNI</h1>
+                            <p>1791574942<br>A/N Aldino Fajar</p>
+                            <div style="display: flex;">
+                                <button class="copy-btn" data-rekening="1791574942">Copy Rek.</button>
+                                <button id="gift-wa">Confirm WhatsApp</button>
+                            </div>
+                        </div>
+                        <div class="bank">
+                            <H1>BNI</H1>
+                            <p>1791574942 <br>A/N Nadila Azzahra</p>
+                            <div style="display: flex;">
+                                <button class="copy-btn" data-rekening="1791574942">Copy Rek.</button>
+                                <button id="gift-wa">Confirm WhatsApp</button>
+                            </div>
+
+                        </div>
+                        <div class="giftBarang">
+                            <p>Anda juga bisa mengirim kado fisik ke alamat berikut.</p><br>
+                            <p>alamat</p>
+                            <p><b>Perumahan Cendana Asri Blok B5 No. 18, Kel. Mulyorejo, Kec. Lestari, Kota Gadingputih,
+                                    53122 <br>
+                                    Penerima : Azzahra</b></p><br>
+                            <div style="display: flex;">
+                                <button class="copy-btn2"
+                                    data-alamat="Perumahan Cendana Asri Blok B5 No. 18,Kel. Mulyorejo, Kec. Lestari, Kota Gadingputih, 53122">Copy
+                                    Alamat</button>
+                                <button id="gift-wa">Confirm WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toast -->
+                    <div id="toast" class="toast">Nomor rekening berhasil disalin✅</div>
+                    <div id="toast2" class="toast2">Alamat penerima berhasil disalin✅</div>
+
+                </div>
+
+            </section>
+
+            <section class="contentH">
+                <h1 class="fade">Wishes & Prayers</h1><br>
+                <p class="fade3" style="text-align: center;">Kami akan merasa sangat berbahagia apabila
+                    Bapak/Ibu/Saudara/i berkenan hadir dan memberikan ucapan serta doa restu terbaik bagi pernikahan
+                    kami.</p><br>
+                <!-- <label class="fade3" for="name">Nama (opsional)</label> -->
+                <input class="fade2" id="name" placeholder="Nama / panggilan"
+                    style="width:100%;padding:8px;border-radius:0px;border:1px solid #ddd;margin-top:6px; font-family: notoSerif; margin-bottom: 10px;" />
+
+                <!-- <label class="fade3" for="message" style="margin-top:8px;display:block">Komentar</label> -->
+                <textarea class="fade4" id="message" style="border-radius: 0; font-family: notoSerif;"
+                    placeholder="Tulis pesan atau ucapan..."></textarea>
+                <div style="display:flex;gap:8px;align-items:center;margin-top:8px;">
+                    <button id="send" style="margin-left: auto;">Kirim</button>
+                    <div id="status" style="font-size:13px;color:#ffffff"></div>
+                </div>
+            </section>
+
+            <div class="comment" style="background: url(img/bg2.jpeg);">
+                <h3>Komentar Publik</h3>
+                <section class="card5">
+                    <div id="comments">Memuat komentar...</div>
+                </section>
+            </div>
+
+
+            <div class="contentI">
+                <p class="fade3">
+                    Kami mengucapkan terima kasih atas kehadiran serta doa dan ucapan tulus yang telah diberikan kepada
+                    kami.</p> <br><br>
+                <h2 class="fade">With Love<br>Aldino & Azzahra</h2>
+            </div>
+
+            <div class="contentJ">
+                <p>Aldino & Azzahra E-Invitation</p>
+                <p style="display: flex; flex-direction: row; gap: 10px;">created with by <img
+                        src="img/Logo Gravisel Pjg.png" alt=""> </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <!-- file JS eksternal (letakkan setelah SDK atau gunakan defer) -->
+    <script src="script.js" defer></script>
+    </div>
+</body>
+
+</html>
