@@ -475,6 +475,9 @@
     }
 
     #open-btn {
+        width:20vh;
+        align-items: center;
+        justify-content: center;
         transform: translateX(-50%);
         padding: 10px 10px;
         background: #B81B3D;
@@ -484,11 +487,19 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         transition: 0.3s ease;
         animation: pulse 1.7s infinite;
-        display: block;
+        display: flex;
         margin: 20px auto 0;
         position: absolute;
-        top: 85%;
-        left: 35%;
+        top: 80%;
+        left: 30%;
+    }
+
+        /* Efek hover glowing */
+    #open-btn:hover {
+        background: white;
+        box-shadow: 0 0 25px rgb(255, 255, 255);
+        transform: scale(1.12);
+        color: #B81B3D;
     }
 
     /* Animasi premium */
@@ -509,13 +520,7 @@
         }
     }
 
-    /* Efek hover glowing */
-    #open-btn:hover {
-        background: white;
-        box-shadow: 0 0 25px rgb(255, 255, 255);
-        transform: scale(1.12);
-        color: #B81B3D;
-    }
+
 
     /* Saat cover hilang */
     /* .cover.hide {
@@ -530,7 +535,7 @@
         padding: 10px;
         border-radius: 5px;
         background-color: #ffffffab;
-        margin-top: 65vh;
+        margin-top: 60vh;
     }
 
     .contentA {
