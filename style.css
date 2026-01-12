@@ -419,7 +419,7 @@
     .ranting-kiri {
         position: fixed;
         left: 0;
-        top: 20%;
+        top: 26%;
         width: 150px;
         transform-origin: left center;
         animation: rantingGoyang 4s ease-in-out infinite;
@@ -428,7 +428,7 @@
     .ranting-kiri2 {
         position: fixed;
         left: 0;
-        top: 26%;
+        top: 28%;
         width: 240px;
         transform-origin: left center;
         animation: rantingGoyang 5s ease-in-out infinite;
