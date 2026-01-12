@@ -489,9 +489,7 @@
         animation: pulse 1.7s infinite;
         display: flex;
         margin: 20px auto 0;
-        position: absolute;
-        top: 80%;
-        left: 30%;
+
     }
 
         /* Efek hover glowing */

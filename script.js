@@ -219,7 +219,7 @@ async function prepareRsvpData() {
     loading.style.display = "flex";
     btn.disabled = true;
 
-    // pakai FormData (tidak men-trigger preflight)
+
     const form = new FormData();
     form.append("name", name);
     form.append("address", address);
@@ -229,11 +229,10 @@ async function prepareRsvpData() {
     try {
         const res = await fetch(RSVP_URL, {
             method: "POST",
-            body: form,      // <--- penting: jangan set header Content-Type
-            mode: "cors"     // masih boleh cors, tapi no preflight because no custom headers
+            body: form,      
+            mode: "cors"     
         });
 
-        // Jika Web App merespon JSON, kita bisa baca:
         const text = await res.text();
         console.log("server response:", text);
 
@@ -252,7 +251,6 @@ async function prepareRsvpData() {
         statusText.textContent = "Gagal mengirim. Coba lagi.";
         statusText.style.color = "red";
     } finally {
-        // PENTING: sembunyikan loading & enable tombol selalu
         loading.style.display = "none";
         btn.disabled = false;
     }
@@ -364,8 +362,7 @@ async function loadComments() {
 // Load saat pertama kali
 loadComments();
 
-// Refresh otomatis tiap 10 detik (opsional)
-// setInterval(loadComments, 10000);
+;
 
 //admin
 
@@ -379,7 +376,7 @@ if (adminMode === "1") {
 }
 
 // ---- PASSWORD ADMIN ----
-const ADMIN_PASSWORD = "123"; // Ganti passwordmu
+const ADMIN_PASSWORD = "123"; // Ganti password
 
 // ---- LOGIN ADMIN ----
 

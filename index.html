@@ -54,10 +54,12 @@
             </div>
             <div class="cover2">
                 <p>Kepada Yth.</p>
-                <h3 id="guest-name" style="font-size: 25px; margin: 5px;">Nama Tamu</h3>
+                <h3 id="guest-name" style="font-size: 20px; margin: 5px;">Nama Tamu</h3>
                 <p>Di Tempat</p>
             </div>
-            <button id="open-btn">Buka Undangan </button>
+            <div style="position: absolute; top: 80%;">
+                <button id="open-btn">Buka Undangan </button>
+            </div>
             <audio id="musik" src="musik/beatiful in white.MP3" autoplay loop></audio>
 
         </div>
@@ -438,11 +440,9 @@
                 <p class="fade3" style="text-align: center;">Kami akan merasa sangat berbahagia apabila
                     Bapak/Ibu/Saudara/i berkenan hadir dan memberikan ucapan serta doa restu terbaik bagi pernikahan
                     kami.</p><br>
-                <!-- <label class="fade3" for="name">Nama (opsional)</label> -->
                 <input class="fade3" id="name" placeholder="Nama / panggilan"
                     style="width:100%;padding:8px;border-radius:0px;border:1px solid #ddd;margin-top:6px; font-family: notoSerif; margin-bottom: 10px;" />
 
-                <!-- <label class="fade3" for="message" style="margin-top:8px;display:block">Komentar</label> -->
                 <textarea class="fade3" id="message" style="border-radius: 0; font-family: notoSerif;"
                     placeholder="Tulis pesan atau ucapan..."></textarea>
                 <div style="display:flex;gap:8px;align-items:center;margin-top:8px;">
@@ -474,11 +474,6 @@
         </div>
 
     </div>
-
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-
-    <!-- file JS eksternal (letakkan setelah SDK atau gunakan defer) -->
     <script src="script.js" defer></script>
     </div>
 </body>
